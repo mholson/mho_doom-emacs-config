@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: Dista
+# key: magfd2p
+# --
+Labeling the points in terms of \\(P_1\\) and \\(P_2\\).
+\\begin{align*}
+P_1(\\cBlue{x_1},\\cPurple{y_1})
+&  &
+P_2(\\cBlue{x_2},\\cPurple{y_2}) \\\
+P_1(\\cBlue{${1:x_1}},\\cPurple{${2:y_1}})
+&  &
+P_2(\\cBlue{${3:x_2}},\\cPurple{${4:y_2}})
+\\end{align}
+Substitute the values into the distance formula and evaluate
+\\begin{align*}
+\\textrm{d}(P_1,P_2 )
+& = \\sqrt{(\\cBlue{\\Delta x})^2+(\\cPurple{\\Delta y})^2} \\\
+& = \\sqrt{(\\cBlue{x_2 - x_1})^2+(\\cPurple{y_2 - y_1})^2} \\\
+&= \\sqrt{(\\farg{$3} - \\farg{$1} )^2 + ( \\farg{$4} - \\farg{$2} )^2} \\\
+&= $0
+\\end{align*}

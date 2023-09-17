@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: insert objv
+# key: >iobjv
+# condition: t
+# --
+${1:$$(yas-choose-value '("defn" "objv"))}-${2:TagID}
+#+transclude: [[file:~/GitHub/mhoTeX/0-tex/tex_core-$2.tex]]
+- $0

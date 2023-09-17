@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: lp_plan-lessons
+# key: lp
+# --
+**** PROJ Plan Lessons Week $1
+***** TODO M ma3c :ma3c:tk21:
+***** TODO M ma2b :ma2b:ek21b:
+***** TODO M mentor :tk22:
+***** TODO T prgm1 :prgm1:tk21:
+***** TODO T ma2c                                                 :tk22:ma2c:
+***** TODO W ma2c                                                 :ma2c:tk22:
+***** TODO W ma2c                                                 :ma2c:tk22:
+***** TODO W prgm1                                               :prgm1:tk21:
+***** TODO R ma3c                                                 :ma3c:na21:
+***** TODO R ma3c                                                 :ma3c:tk21:
+***** TODO R ma2c                                                 :ma2c:tk22:
+***** TODO F ma3c                                                 :ma3c:na21:
+***** TODO F ma2b                                                :ma2b:ek21b:
+$0

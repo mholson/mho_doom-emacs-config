@@ -1,0 +1,4 @@
+# name: insert note
+# key: fin
+# --
+\input{0-tex/tex_note-${1:NoteID}}% ${0:Optional Description}

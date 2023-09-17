@@ -1,0 +1,11 @@
+# name: m.f.abs - Absolute Value Function Cases
+# key: mfabs
+# --
+\\begin{align*}
+    \\abs{$1}
+    &=
+    \\begin{cases}
+        \\cRed{{$1}} & {$1} \ge 0 \\\
+        \\cBlue{\oneg ($1)} & $1 < 0
+     \\end{cases}
+\\end{align*}

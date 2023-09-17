@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: tikz file template
+# key: ttikz
+# --
+
+\documentclass[crop]{standalone}
+
+\usepackage{mhocolorthemenord}
+\usepackage{mhomacros}
+\usepackage{mhotikz}
+\usepackage{mhotikzfonts}
+
+\begin{document}
+$0
+\end{document}

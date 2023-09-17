@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:custom js src code block
+# key:srcjs
+# --
+#+begin_src js :results output
+$0
+#+end_src

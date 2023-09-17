@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: inter question text
+# key: eit
+# --
+\\begin{EnvUplevel}
+$0
+\\end{EnvUplevel}

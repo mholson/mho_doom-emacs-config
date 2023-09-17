@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: Distributive Law x-check
+# key: tikzdlxc
+# --
+\begin{tikzpicture}[scale=1, auto]
+% Place nodes
+
+\node[firstterm](11){\\( ${1:F1T1} \\)};
+\node[terms,right=of 11](plus1){\\( + \\) };
+\node[secondterm, right=of plus1](12){\\( ${2:F1T2} \\)};
+\node[firstterm, below=of 11](21){ \\( ${3:F2T1} \\) };
+\node[terms,right=of 21](plus2){\\( + \\) };
+\node[secondterm, right=of plus2](22){\\( ${4:F2T2} \\)};
+\node[multiply1, below=of 21](31){ \\( ${5:TriT1} \\) };
+\node[multiply2, below=of 22](32){ \\( ${6:TriT3} \\) };
+\node[xmultiply, right=of 12](13){\\( ${7:xCheck1} \\)};
+\node[xmultiply, right=of 22](23){\\( ${8:xCheck2} \\)};
+\node[add, below=of 23](33){ \\( ${9:TriT2} \\) };
+
+\path[lineRed](11) edge[binomsleftarrow]node[leftarrowmul]{ \\( \\times \\)}(21);
+\path[lineDarkBlue](12) edge[binomsrightarrow]node[rightarrowmul]{ \\( \\times \\)}(22);
+
+\path[lineRed](21)--(31);
+\path[lineAquaBlue](21)--(12);
+\path[lineAquaBlue](11)--(22);
+\path[lineDarkBlue](22)--(32);
+\path[lineAquaBlue](12)--(13);
+\path[lineAquaBlue](22)--(23);
+\path[lineAquaBlue](23)--(33);
+
+\node[xcheck] at (\\((plus1)!0.5!(plus2)\\)){\\( \\times \\) };
+
+\end{tikzpicture}

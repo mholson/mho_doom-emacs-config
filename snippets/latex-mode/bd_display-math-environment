@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: bd display math environment
+# key: md
+# --
+\\[
+    ${1: expression or equation}
+\\]
+$0

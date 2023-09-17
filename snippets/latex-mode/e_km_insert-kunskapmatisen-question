@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: insert kunskapmatrisen question
+# key: ekm
+# --
+
+% km_${1:course}_${2:unit}_${3:questionID}
+\input{0-tex/tex_exam-${4:exam-id}}

@@ -1,0 +1,116 @@
+# -*- mode: snippet -*-
+# name: Beamer New Deck
+# key: bnd
+# --
+
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+% Author: Mark H. Olson
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% PREAMBLE
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+% > > >	The following beamer class options are available
+%		aspectratio=169		Change aspect ratio to 16:9
+%		bibref				Include bibliography
+%		sectionpages		Show section pages
+%		codeminted			use minted pkg for code printing instead of listings
+%							(requires additional setup & Python installed)
+% 		font sizes 			{8, 9, 10, 11, 12, 14, 17, 20} 11 Default
+%
+% > > > The following sthlmnord package options are available
+%		mode				= dark (default)
+%							= light
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\documentclass[aspectratio=169,sectionpages]{beamer}
+% > > > Bibliography File
+%\newcommand{\bibfilename}{mhoRef.bib}
+% > > > Choose Theme
+\usetheme[mode=light]{sthlmnord}
+%\usetheme{sthlmnord}
+
+
+% > > >	Image File Paths
+% 		Here you can add one or more paths to where your images are being
+%		stored.  This will allow you to include only the image file
+%		name when placing it into your document.
+%\graphicspath{{path1},{path2},{path3}}
+\graphicspath{{\string~/Documents/assets/}}
+% > > >	Optional use of using subfiles to make content more modular
+\usepackage{subfiles}
+
+% > > > Document Information
+\title{}
+\subtitle{}
+\newcommand{\titleAuthor}{Created by}
+\author{Mark Olson}
+\newcommand{\titleInstitute}{Institute}
+\institute{Amerikanska Gymansiet STHLM}
+\newcommand{\titleMiscI}{Course}
+\newcommand{\descMiscI}{}
+\newcommand{\titleMiscII}{File}
+\newcommand{\descMiscII}{\currfilebase}
+\date{\today}
+\titlegraphic{./images/nordtitlelogolight}
+
+% > > > pdf customizations via hyperref (pkg installed by beamer)
+\hypersetup{
+%colorlinks=true,
+% You might want to disable color links for you final draft
+% AND for colors to work properly where links are involved.
+colorlinks=false,
+linkcolor={nordNine},
+citecolor={nordNine},
+urlcolor={nordNine}
+}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+%    DOCUMENT BEGINS HERE
+%
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{document}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%   TITLE START   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\titlepage%
+%   TITLE END   --==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%   TABLE OF CONTENTS START   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{frame}
+	\frametitle{Table of contents}
+	% > > > For longer presentations use \tableofcontents[hideallsubsections] option
+	%		It is also possible to manually control the entries of the table of
+	% 		contents by sections.
+	%\tableofcontents[sections={1-10}]
+	%\framebreak
+	%\tableofcontents[sections={11-15}]
+	\tableofcontents
+\end{frame}
+%   TABLE OF CONTENTS END   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% SECTION
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\section{Background Information}
+
+%\subfile{0-tex/tex_slide.useMetroWarning}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% SECTION
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% \section{References}
+
+% \begin{frame}[allowframebreaks]{References}
+% 	\printbibliography[title={References}]%
+% \end{frame}
+
+\end{document}
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+% END OF FILE
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=

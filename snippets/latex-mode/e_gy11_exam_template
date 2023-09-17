@@ -1,0 +1,74 @@
+# -*- mode: snippet -*-
+# name: gy11 exam template
+# key: e.gy
+# --
+
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+%	DOCUMENT INFORMATION
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+% > > > DOCUMENT CLASS
+\documentclass[a4paper,12pt]{exam}
+% \printanswers%
+
+% > > > COURSE
+\newcommand{\course}{${1:examcode}}
+
+% > > > TERM
+\newcommand{\courseterm}{${2:term}}
+
+% > > > EXAM NUMBER
+\newcommand{\examnumber}{${3:exam number}}
+
+% -- TOTAL POINTS
+\newcommand{\epoints}{${4:epoints}}
+\newcommand{\cpoints}{${5:cpoints}}
+\newcommand{\apoints}{${6:cpoints}}
+
+% -- DURATION
+\newcommand{\examduration}{${7:time} minutes}
+
+% > > KEYWORDS
+\newcommand{\documentkeywords}{${8:keywords}}
+
+% > > > EXAM SUBJECT
+\newcommand{\examsubject}{${9:subject}}
+
+% > > > VERSION
+\newcommand{\documentversion}{\today}
+
+% -- CALCULATOR PERMISSION
+\newcommand{\calculatorpermission}{Calculator \textbf{PERMITTED}}
+% \newcommand{\calculatorpermission}{Calculator \textbf{NOT PERMITTED}}
+
+% -- WRITE SOLUTIONS
+\newcommand{\writesolutions}{on the \textbf{squared paper}}
+% \newcommand{\writesolutions}{in the \textbf{test booklet}}
+
+% -- FORMULA BOOKLET PERMISSION
+\newcommand{\formulabooklet}{Formula Booklet Provided}
+
+% -- SOLUTION BOX TYPE
+% \newcommand{\solnboxtype}{solutionordottedlines}
+% \newcommand{\solnboxtype}{solutionorbox}
+\newcommand{\solnboxtype}{solution}
+
+% > >  CUSTOM GRADING TABLE
+% \newcommand{\customgradetable}{
+% = SingleRow
+% \gradetable[h][questions]
+% = MultiRow
+% \setlength{\doublerulesep}{0.25in}
+% \multirowgradetable{2}[questions]
+% }
+
+\usepackage{mhoexamgy}
+
+\begin{document}
+\makecoverpage%
+\newpage\null\thispagestyle{empty}\newpage
+
+\begin{questions}
+  \input{0-tex/tex_exam-$0}
+\end{questions}
+\end{document}

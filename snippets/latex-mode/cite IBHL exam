@@ -1,0 +1,4 @@
+# name: cite IB exam
+# key: citeexamib
+# --
+\\mref{${1:$$(yas-choose-value '("IBHL" "IBSL" "IBST" "AASL" "AAHL"))}-${2:$$(yas-choose-value '("M" "N" "SPEC"))}${3:year}-P${4:$$(yas-choose-value '("1" "2" "3"))}-TZ${5:$$(yas-choose-value '("0" "1" "2"))}-Q$6\\index{$1-$2$3-P$4-TZ$5!Q$6}}

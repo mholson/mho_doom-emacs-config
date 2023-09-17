@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: Mini Page Three Cases
+# key: mp3
+# --
+\hfill\\\
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0pt}
+\textbf{Case I:}
+\begin{align*}
+$0
+\end{align*}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0pt}
+\textbf{Case II:}
+\begin{align*}
+
+\end{align*}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0pt}
+\textbf{Case III:}
+\begin{align*}
+
+\end{align*}
+\end{minipage}
+\hfill

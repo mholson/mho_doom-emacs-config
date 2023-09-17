@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: ib exam paper
+# key:ib.exam
+# --
+* Paper 1
+** TZ1
+-
+** TZ2
+-
+* Paper 2
+** TZ1
+-
+** TZ2
+-

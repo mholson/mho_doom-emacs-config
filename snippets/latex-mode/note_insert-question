@@ -1,0 +1,6 @@
+# key: n.iq
+# name: note_insert-question
+# --
+\tbqn{${1:Textbook Question}}%
+\input{0-tex/tex_note-${2:tagID}}
+$0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name:ib question part number
+# key: eqpn
+# --
+\\ibqn{$1} $0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cite Matematik 5000 2b 2022
+# key: citema2b50002022
+# --
+\\mref{ma2b-5000-2022-Q${1:Chapter}${2:Number}\\cite{alfredssonMatematik5000Kurs2b2022}\\index{ma2b-5000-2022-${1:$()}000!Q$1$2}}

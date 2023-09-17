@@ -1,0 +1,26 @@
+# name: Domain, Range, Function Bubble Set
+# key: tikzfbs
+# --
+\\begin{bubbleset}
+\\def\\domainsize{${1:domain_elements}} % Enter the number of elements in the domain
+\\def\\codomainsize{${2:codomain_elements}} % Enter the number of elements in the codomain
+\\def\\domainname{\\(${3:domain_set_name}\\)}% Enter the name of the domain
+\\def\\codomainname{\\(${4:codomain_set_name}\\)} %Enter the name of the codomain
+\\newcommand{\\domainelement}[2][]{\\delement[#1]{#2}{\\domainsize}{\\codomainsize}}
+\\newcommand{\\codomainelement}[2][]{\\codelement[#1]{#2}{\\domainsize}{\\codomainsize}}
+% Domain Elements
+\\domainelement[\\(\\)]{1}
+\\domainelement[\\(\\)]{2}
+\\domainelement[\\(\\)]{3}
+\\domainelement[\\(\\)]{4}
+% Codmain Elements
+\\codomainelement[\\(\\)]{1}
+\\codomainelement[\\(\\)]{2}
+\\codomainelement[\\(\\)]{3}
+\\codomainelement[\\(\\)]{4}
+% Function element arrows
+\\functionarrow{1}{1}
+\\functionarrow{2}{2}
+\\functionarrow{3}{2}
+\\functionarrow{4}{3}
+\\end{bubbleset}$0"

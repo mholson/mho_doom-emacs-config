@@ -1,0 +1,40 @@
+# key: tbl_d1_test_1pt
+# name: 1st diff test table 1-point
+# --
+Using the first derivative test table,
+\\begin{center}
+\\(\\begin{tblr}{|c||c|c|c|c|c|}
+\\hline
+\\diagbox{f(x)}{x}
+& \\intleft
+& ${1:spt1}
+& \\intleftright \\\\
+\\hline
+x
+& ${2:spt-test-left}
+& $1
+& ${3:spt-test-right}\\\\
+\\hline
+f'(x)
+& ${4:spt-diff-value-left}
+& 0
+& ${5:spt-diff-value-right}\\\\
+\\hline
+f
+& \\${6:$$(yas-choose-value '("incf" "decf"))}
+& \\stationary
+& \\${7:$$(yas-choose-value '("incf" "decf"))}
+\\\\
+\\hline
+\text{classify}
+&
+& ${8:$$(yas-choose-value '("MAX" "MIN" ""))}
+& \\\\
+\\hline
+\\text{point}
+&
+& \\mpar{$1, ${9:func-value}}
+& \\\\
+\\hline
+\\end{tblr}\\)
+\\end{center}

@@ -1,0 +1,54 @@
+# key: tbl_d1_test_2pts
+# name: 1st diff test table 2-points
+# --
+Using the first derivative test table,
+\\begin{center}
+\\(\\begin{tblr}{|c||c|c|c|c|c|}
+\\hline
+\\diagbox{f(x)}{x}
+& \\intleft
+& ${1:spt1}
+& \\intleftright
+& ${2:spt2}
+& \\intright \\\\
+\\hline
+x
+& ${3:spt-test-left}
+& $1
+& ${4:spt-test-center}
+& $2
+& ${5:spt-test-right}\\\\
+\\hline
+f'(x)
+& ${6:spt-diff-value-left}
+& 0
+& ${7:spt-diff-value-center}
+& 0
+& ${8:spt-diff-value-right}\\\\
+\\hline
+f
+& \\${9:$$(yas-choose-value '("incf" "decf"))}
+& \\stationary
+& \\${10:$$(yas-choose-value '("incf" "decf"))}
+& \\stationary
+& \\${11:$$(yas-choose-value '("incf" "decf"))}
+\\\\
+\\hline
+\text{classify}
+&
+& ${12:$$(yas-choose-value '("MAX" "MIN" ""))}
+\\\\
+&
+& ${13:$$(yas-choose-value '("MAX" "MIN" ""))}
+\\\\
+& \\\\
+\\hline
+\\text{points}
+&
+& \\mpar{$1, ${14:func-value}}
+&
+& \\mpar{$2, ${15:func-value}}
+& \\\\
+\\hline
+\\end{tblr}\\)
+\\end{center}

@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: Mini Page Two Cases
+# key: mp2
+# --
+\hfill\\\
+\begin{minipage}[t]{0.45\textwidth}
+\vspace{0pt}
+\textbf{Case I:}
+\begin{align*}
+$0
+\end{align*}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
+\vspace{0pt}
+\textbf{Case II:}
+\begin{align*}
+
+\end{align*}
+\end{minipage}
+\hfill

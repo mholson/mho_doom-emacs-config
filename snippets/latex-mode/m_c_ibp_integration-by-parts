@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: Integration by Parts
+# key: mcibp
+# --
+
+Using integration by parts.
+\\begin{align*}
+\\displaystyle \\int \\! \\cPurple{u} \\cRed{v'} \\dl x
+&= \\cPurple{u}\\cBlue{v}
+- \\displaystyle \\int \\! \\cRed{u'} \\cBlue{v} \\dl x \\\
+\\cPurple{u} = \\cPurple{${1:u}}
+& \\qquad \\cRed{v'} = \\cRed{${2:v'}} \\\
+\\cRed{u'} = \\cRed{${3:u'}}
+& \\qquad \\cBlue{v} = \\cBlue{${4:v}} \\\
+\\displaystyle \\int \\! \\cPurple{$1} \\cRed{\\mpar{$2}} \\dl x
+&= \\cPurple{$1}\\cBlue{\\mpar{$4}} - \\displays\\\tyle \\int \\! \\cRed{$3} \\cBlue{\\mpar{$4}\\} \\dl x \\\
+&= $0
+\\end{align*}

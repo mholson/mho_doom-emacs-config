@@ -1,0 +1,71 @@
+# name: probability tree 3 trials
+# key: tikzp3t
+# --
+\\begin{istgame}[font=\\footnotesize]
+
+\\setistgrowdirection{south}
+\\setistEllipseNodeStyle{20pt}
+
+\\xtdistance{15mm}{70mm}
+\\istrooto(0)(0,0)
+\\istb{\\cRed{${1:L}}}[br]
+\\istb{\\cDarkBlue{${2:R}}}[bl]
+\\endist
+\\xtdistance{15mm}{30mm}
+\\istrooto(1)(0-1)[white, fill=\\cnRed]{\\(${3:E1}\\)}
+\\istb{\\cRed{${5:LL}}}[al]
+\\istb{\\cDarkBlue{${6:LR}}}[ar]
+\\endist
+
+\\istrooto(2)(0-2)[white, fill=\\cnDarkBlue]{\\(${4:E2}\\)}
+\\istb{\\cRed{${7:RL}}}[al]
+\\istb{\\cDarkBlue{${8:RR}}}[ar]
+\\endist
+
+\\xtdistance{15mm}{20mm}
+
+\\istrooto(3)(1-1)[white, fill=\\cnRed]{\\($3\\)}
+\\istb{\\cRed{${9:LLL}}}[al]
+\\istb{\\cDarkBlue{${10:LLR}}}[ar]
+\\endist
+
+\\istrooto(4)(1-2)[white, fill=\\cnDarkBlue]{\\($4\\)}
+\\istb{\\cRed{${11:LRL}}}[al]
+\\istb{\\cDarkBlue{${12:LRR}}}[ar]
+\\endist
+
+\\istrooto(5)(2-1)[white, fill=\\cnRed]{\\($3\\)}
+\\istb{\\cRed{${13:RLL}}}[al]
+\\istb{\\cDarkBlue{${14:RLR}}}[ar]
+\\endist
+
+\\istrooto(6)(2-2)[white, fill=\\cnDarkBlue]{\\($4\\)}
+\\istb{\\cRed{${15:RRL}}}[al]
+\\istb{\\cDarkBlue{${16:RRR}}}[ar]
+\\endist
+
+\\istrooto(7)(3-1)[white, fill=\\cnRed]{\\($3\\)}
+\\endist
+
+\\istrooto(8)(3-2)[white, fill=\\cnDarkBlue]{\\($4\\)}
+\\endist
+
+\\istrooto(9)(4-1)[white, fill=\\cnRed]{\\($3\\)}
+\\endist
+
+\\istrooto(10)(4-2)[white, fill=\\cnDarkBlue]{\\($4\\)}
+\\endist
+
+\\istrooto(11)(5-1)[white, fill=\\cnRed]{\\($3\\)}
+\\endist
+
+\\istrooto(12)(5-2)[white, fill=\\cnDarkBlue]{\\($4\\)}
+\\endist
+
+\\istrooto(11)(6-1)[white, fill=\\cnRed]{\\($3\\)}
+\\endist
+
+\\istrooto(12)(6-2)[white, fill=\\cnDarkBlue]{\\($4\\)}
+\\endist
+
+\\end{istgame}

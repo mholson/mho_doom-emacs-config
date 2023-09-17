@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cite Matematik 5000 3c 2019
+# key: citema3c50002019
+# --
+\\mref{ma3c-5000-2019-Q${1:Chapter}${2:Number}\\cite{alfredssonMatematik5000Kurs3c2019}\\index{ma3c-5000-2019-${1:$()}000!Q$1$2}}

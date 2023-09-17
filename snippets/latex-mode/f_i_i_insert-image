@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: insert image
+# key: fii
+# --
+\begin{center}
+\includegraphics[width=${3:0.8}\textwidth]{${1:$$(yas-choose-value '("tikz" "python" "images" "exams-km" "exams-IGCSE" "exams-IB" "exams-gy11"))}/imgs_$1-${2:filename}}
+\end{center}
+$0

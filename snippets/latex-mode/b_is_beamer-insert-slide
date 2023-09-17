@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Insert Beamer Slide
+# key: bis
+# --
+\subfile{0-tex/tex_slide-${1:SlideID}}$0

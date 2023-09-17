@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: Latex Insert Table
+# key: tblxy
+# --
+
+\\begin{center}
+\\(
+\\begin{tblr}{hlines,
+vlines,
+columns={15mm, c}}
+\\SetCell{bg=\cnBlue} x & & & & & \\\
+\\SetCell{bg=\cnPurple} y & & & & & \\\
+\\end{tblr}
+\\)
+\\end{center}
+$0

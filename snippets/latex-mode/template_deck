@@ -1,0 +1,110 @@
+# -*- mode: snippet -*-
+# name: Slide Deck Template
+# key: t.d
+# --
+
+%=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+% Author: Mark H. Olson
+% =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% PREAMBLE
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+% > > > The following beamer class options are available
+% aspectratio=169       Change aspect ratio to 16:9
+% bibref                Include bibliography
+% sectionpages          Show section pages
+% pdflatex              Compile with pdflatex
+% codeminted            use minted pkg for code printing instead of listings
+%                       (requires additional setup & Python installed)
+% font sizes            {8, 9, 10, 11, 12, 14, 17, 20} 11 Default
+%
+% > > > The following sthlmnord package options are available
+% mode = dark (default)
+% mode = light
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\documentclass[aspectratio=169]{beamer}
+%\documentclass[aspectratio=169, codeminted]{beamer}
+% > > > Bibliography File
+%\newcommand{\bibfilename}{0-mhoRef.bib}
+% > > > Choose Theme
+\usetheme[mode=light]{sthlmnord}
+% \usetheme{sthlmnord}
+
+% > > >Image File Paths
+% Here you can add one or more paths to where your images are being
+% stored.  This will allow you to include only the image file
+% name when placing it into your document.
+% \graphicspath{{path1},{path2},{path3}}
+\graphicspath{{\string~/Library/CloudStorage/Dropbox/assets/}}
+% > > >Optional use of using subfiles to make content more modular
+\usepackage{subfiles}
+% > > > Document Information
+\makeatletter
+\ifdefined\preamble@file
+    % stuff for the subfile
+\else
+    % stuff for the main file
+\title{${1:Title}}
+\subtitle{${2:Subtitle}}
+\newcommand{\titleAuthor}{Created by}
+\author{Mark Olson}
+\newcommand{\titleInstitute}{Institute}
+\institute{Amerikanska Gymanasiet STHLM}
+\newcommand{\titleMiscI}{Course}
+\newcommand{\descMiscI}{${3:Course Name}}
+\newcommand{\titleMiscII}{File}
+\newcommand{\descMiscII}{\currfilebase}
+\date{\today}
+\titlegraphic{./images/nordtitlelogolight}
+\fi
+\makeatother
+
+% > > > pdf customizations via hyperref (pkg installed by beamer)
+\hypersetup{
+  % colorlinks=true,
+  % You might want to disable color links for you final draft
+  % AND for colors to work properly where links are involved.
+  colorlinks=false,
+  linkcolor={nordNine},
+  citecolor={nordNine},
+  urlcolor={nordNine}
+}
+
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%
+% DOCUMENT BEGINS HERE
+%
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{document}
+
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% TITLE START   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%\titlepage%
+% TITLE END   --==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% TABLE OF CONTENTS START   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%\begin{frame}
+%  \frametitle{Table of contents}
+  % > > > For longer presentations use \tableofcontents[hideallsubsections] option
+  % It is also possible to manually control the entries of the table of
+  % contents by sections.
+  % \tableofcontents[sections={1-10}]
+  % \framebreak
+  % \tableofcontents[sections={11-15}]
+%  \tableofcontents
+%\end{frame}
+% TABLE OF CONTENTS END   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+\subfile{} %
+
+%\begin{frame}[allowframebreaks]{References}
+%  \printbibliography[title={References}]%
+%\end{frame}
+
+\end{document}

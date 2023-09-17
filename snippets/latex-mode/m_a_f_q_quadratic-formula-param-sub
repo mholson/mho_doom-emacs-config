@@ -1,0 +1,8 @@
+# name: quadratic formula parameter substitution
+# key: mafqs
+# --
+\\begin{align*}
+x &= \\dfrac{\oneg b \\pm \\sqrt{b^2 - 4ac}}{2a}\\\\
+&= \\dfrac{\oneg \\farg{${1:b}} \\pm \\sqrt{\\farg{$1}^2 - 4\\farg{${2:a}\\farg{${3:c}}}}{2\\farg{$2}}\\\\
+&=$0
+\\end{align*}
