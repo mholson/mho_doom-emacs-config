@@ -699,7 +699,8 @@
 ;; KEYBINDINGS
 ;;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 (global-set-key (kbd "C-å") 'sp-wrap-curly)
-(global-set-key (kbd "C-ä") 'sp-up-sexp)
+;;(global-set-key (kbd "C-ä") 'sp-up-sexp)
+(global-set-key (kbd "M-o") 'sp-up-sexp)
 (global-set-key (kbd "M-w") 'save-buffer)
 
 ;;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
