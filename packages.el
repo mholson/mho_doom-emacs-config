@@ -46,6 +46,7 @@
                                         ;(unpin! pinned-package)
 (unpin! org-roam)
 (package! org-roam-ui)
+(package! denote)
 (package! org-transclusion)
 (package! zotxt)
 (package! org-super-agenda)
