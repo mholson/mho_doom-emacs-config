@@ -46,6 +46,7 @@
 % \newcommand{\writesolutions}{in the \textbf{test booklet}}
 
 % -- FORMULA BOOKLET PERMISSION
+%\newcommand{\formulabooklet}{No Formula Booklet Provided}
 \newcommand{\formulabooklet}{Formula Booklet Provided}
 
 % -- SOLUTION BOX TYPE
