@@ -144,12 +144,12 @@
     :cond #'texmathp ; expand only while in math
     "==" "&="
     "bfb" "\\framebreak%"
-    "cc" "^"
     "cd" "\\cdot"
     "d1" "\\diff{y}{x}"
     "d2" "\\diff[2]{y}{x}"
     "dx" "\\dl x"
     "dy" "\\dl y"
+    "ee" "^"
     "fx" "f(x)"
     "fp" "\\fprime"
     "ffp" "\\fprime (x)"
