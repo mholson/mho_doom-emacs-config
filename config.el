@@ -562,6 +562,99 @@
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
 ;;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+;; DENOTE
+;;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+(defun mho-insert-denote-identifier ()
+  "Get the file's creation date and time and u se it to create a denote identifier."
+  (interactive)
+  (insert (format-time-string "#+identifier: %Y%m%dT%H%M%S" (nth 5 (file-attributes buffer-file-name)))))
+
+(defun mho-insert-org-date ()
+  "Get the file's creation date and time and use it to insert the date using an org format."
+  (interactive)
+  (insert (format-time-string "#+date: [%Y-%m-%d %a %H:%M]" (nth 5 (file-attributes buffer-file-name)))))
+(require 'denote)
+
+;; Remember to check the doc strings of those variables.
+(setq denote-directory (expand-file-name "~/Library/CloudStorage/Dropbox/mho_denote"))
+(setq denote-known-keywords '("moc" "defn" "soln" "exam" "thmr" "prop" "python" "swift" "js" "html" "css"))
+(setq denote-infer-keywords t)
+(setq xref-search-program 'ripgrep)
+(setq denote-sort-keywords t)
+(setq denote-file-type nil) ; Org is the default, set others here
+(setq denote-prompts '(title keywords))
+;; (setq denote-excluded-directories-regexp nil)
+;; (setq denote-excluded-keywords-regexp nil)
+;; Pick dates, where relevant, with Org's advanced interface:
+(setq denote-date-prompt-use-org-read-date t)
+
+;; By default, we do not show the context of links.  We just display
+;; file names.  This provides a more informative view.
+(setq denote-backlinks-show-context t)
+
+;; Generic (great if you rename files Denote-style in lots of places):
+(add-hook 'dired-mode-hook #'denote-dired-mode)
+;;
+;; OR if only want it in `denote-dired-directories':
+;;(add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
+;; Denote DOES NOT define any key bindings.  This is for the user to
+;; decide.  For example:
+(map! :prefix "C-c n"
+      "n" #'denote
+      "c" #'denote-region
+      "N" #'denote-type
+      "d" #'denote-date
+      "z" #'denote-signature
+      "s" #'denote-subdirectory
+      "t" #'denote-template
+      "i" #'denote-link
+      "I" #'denote-add-links
+      "b" #'denote-backlinks
+      "f f" #'denote-find-link
+      "f b" #'denote-find-backlink
+      "r" #'denote-rename-file
+      "R" #'denote-rename-file-using-front-matter)
+
+;; Key bindings specifically for Dired.
+(map! :after dired
+      :map dired-mode-map
+      "C-c C-d C-i" #'denote-link-dired-marked-notes
+      "C-c C-d C-r" #'denote-dired-rename-marked-files
+      "C-c C-d C-R" #'denote-dired-rename-marked-files-using-front-matter)
+
+(map! :leader
+      (:prefix-map ("d" . "denote")
+                   (:prefix ("n" . "notes")
+                    :desc "Link" "l" #'denote-link
+                    :desc "identifier" "i" #'mho-insert-denote-identifier
+                    :desc "org-date" "d" #'mho-insert-org-date
+                    :desc "Add Link" "L" #'denote-add-links
+                    :desc "Find Link" "f" #'denote-find-link
+                    :desc "Find Back Link" "F" #'denote-find-backlink
+                    :desc "Rename (frontmatter)" "r" #'denote-rename-file-using-front-matter
+                    :desc "Rename (frontmatter)" "R" #'denote-rename-file
+                    :desc "Link with Signature" "s" #'denote-link-with-signature
+                    )))
+;; (with-eval-after-load 'org-capture
+;;   (setq denote-org-capture-specifiers "%l\n%i\n%?")
+;;   (add-to-list 'org-capture-templates
+;;                '("n" "New note (with denote.el)" plain
+;;                  (file denote-last-path)
+;;                  #'denote-org-capture
+;;                  :no-save t
+;;                  :immediate-finish nil
+;;                  :kill-buffer t
+;;                  :jump-to-captured t)))
+
+;; Also check the commands `denote-link-after-creating',
+;; `denote-link-or-create'.  You may want to bind them to keys as well.
+
+
+;; If you want to have Denote commands available via a right click
+;; context menu, use the following and then enable
+;; `context-menu-mode'.
+;;(add-hook 'context-menu-functions #'denote-context-menu)
+;;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ;; ORG-DEF
 ;;=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
