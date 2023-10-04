@@ -510,10 +510,8 @@
                                                      (seq-remove #'nonspacing-mark-p
                                                                  (string-glyph-decompose s)))))
                  (cl-replace (title pair) (replace-regexp-in-string (car pair) (cdr pair) title)))
-        (let* ((pairs `(("[^[:alnum:][:digit:]]" . "_") ;; convert anything not alphanumeric
-                        ("__*" . "_")                   ;; remove sequential underscores
-                        ("^_" . "")                     ;; remove starting underscore
-                        ("_$" . "")))                   ;; remove ending underscore
+        (let* ((pairs `(("[^[:alnum:][:digit:]-]" . "_") ;; convert anything not alphanumeric
+                        ))                   ;; remove ending underscore
                (slug (-reduce-from #'cl-replace (strip-nonspacing-marks title) pairs))) slug))))
   (setq org-roam-node-display-template
         (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
