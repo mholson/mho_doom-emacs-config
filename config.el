@@ -144,7 +144,6 @@
     :cond #'texmathp ; expand only while in math
     "==" "&="
     "bfb" "\\framebreak%"
-    "cd" "\\cdot"
     "d1" "\\diff{y}{x}"
     "d2" "\\diff[2]{y}{x}"
     "dx" "\\dl x"
@@ -163,6 +162,7 @@
     "lc" "\\$0"
     "mst" "\\suchthat"
     "nn" "\\oneg"
+    "xx" "\\cdot"
     ;; bind to functions!
     "cr" (lambda () (interactive)
            (yas-expand-snippet "\\cRed{${1:arg}}$0"))
