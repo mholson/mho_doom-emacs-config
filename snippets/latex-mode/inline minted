@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: inline minted
+# key: fimi
+# --
+\mintinline{$1}{$0}
