@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: exam gy points
+# key: egp
+# --
+$1/$2/$0
