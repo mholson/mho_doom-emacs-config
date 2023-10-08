@@ -52,9 +52,14 @@
 (package! org-super-agenda)
 (package! aas)
 (package! laas)
-(package! keycast :recipe (:host github :repo "tarsius/keycast"
+(package! ob-swift :recipe (:host github
+                            :repo "zweifisch/ob-swift"
+                            :files ("*.el")))
+(package! keycast :recipe (:host github
+                           :repo "tarsius/keycast"
                            :files ("*.el" "Makefile")))
-(package! calctex :recipe (:host github :repo "johnbcoughlin/calctex"
+(package! calctex :recipe (:host github
+                           :repo "johnbcoughlin/calctex"
                            :files ("*.el" "calctex/*.el" "calctex-contrib/*.el" "org-calctex/*.el" "vendor")))
 ;; (package! doom-nano-modline :recipe (:host github :repo "ronisbr/doom-nano-modeline"
 ;;                            :files ("*.el")))
