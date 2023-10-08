@@ -605,6 +605,18 @@
 ;;(add-hook 'dired-mode-hook #'denote-dired-mode-in-directories)
 ;; Denote DOES NOT define any key bindings.  This is for the user to
 ;; decide.  For example:
+
+;; Additional modifications
+(defun denote-sluggify (str)
+  "Make STR an appropriate slug for file names and related. Removed lowercase."
+  (denote--slug-hyphenate (denote--slug-no-punct str)))
+
+(defun denote-sluggify-and-join (str)
+  "Sluggify STR while joining separate words. Removed lowercase."
+  (replace-regexp-in-string
+   "-" ""
+   (denote--slug-hyphenate (denote--slug-no-punct str))))
+
 (map! :prefix "C-c n"
       "n" #'denote
       "c" #'denote-region
