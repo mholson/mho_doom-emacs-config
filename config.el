@@ -316,11 +316,17 @@
 ;; (setq org-roam-directory "~/Github/mhoOrgRoam/")
 (setq org-roam-directory "~/Library/CloudStorage/Dropbox/mho_org-roam/")
 ;; Adding Babel Languages
-;; (Org-Babel-Do-Load-Languages
-;;  'Org-Babel-Load-Languages
-;;  '((Js . T)
-;;    (Latex . T)
-;;    (Python . T)))
+;; Swift
+(use-package! ob-swift
+  :after org
+  :config
+  (org-babel-do-load-languages 'org-babel-load-languages '((swift . t))))
+;;
+;; (org-babel-do-load-languages
+;;  'org-babel-load-languages
+;;  '((js . t)
+;;    (latex . t)
+;;    (python . t)))
 (after! org
 
   ;; C-c c is for capture, it’s good enough for me
