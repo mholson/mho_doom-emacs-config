@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: exam multiple choice
+# key: emc
+# --
+\ifexam
+  \begin{choices}
+    \CorrectChoice
+    \choice
+  \end{choices}
+\else
+  \begin{enumerate}
+
+  \end{enumerate}
+\fi
