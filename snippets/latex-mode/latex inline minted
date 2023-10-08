@@ -1,0 +1,4 @@
+# key: cml
+# name: inline minted
+# --
+\mintinline{swift}{$1}$0
